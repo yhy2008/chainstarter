@@ -14,7 +14,7 @@ const web3 = new Web3(provider);
 const deploy = async () => {
     const accounts = await web3.eth.getAccounts();
 
-    console.log('正在使用账户', accounts[0]，'部署合约');
+    console.log('正在使用账户', accounts[0], '部署合约');
 
     result = await new web3.eth.Contract(JSON.parse(compiledCrowdfundFactory.interface))
         .deploy({ data: compiledCrowdfundFactory.bytecode })
