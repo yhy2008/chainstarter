@@ -6,9 +6,7 @@
   "scripts": {
     "test": "mocha",
     "dev": "node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "web": "next build && NODE_ENV=production node server.js"
+    "start": "next build && NODE_ENV=production node server.js"
   },
   "author": "",
   "license": "ISC",
