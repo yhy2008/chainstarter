@@ -1,9 +1,8 @@
 const { createServer } = require('http');
 const next = require('next');
-const config = require('./config');
 
 const app = next({
-    dev: config.NODE_ENV !== 'production'
+    dev: process.env.NODE_ENV !== 'production'
 });
 
 const routes = require('./routes');
