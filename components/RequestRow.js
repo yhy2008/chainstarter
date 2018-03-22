@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button } from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
 import Crowdfund from '../ethereum/crowdfund';
+import { Router } from '../routes';
 
 class RequestRow extends Component {
     state = {
@@ -18,6 +19,7 @@ class RequestRow extends Component {
             await crowdfund.methods.approveRequest(this.props.id).send({
                 from: accounts[0]
             });
+            Router.pushRoute(`/crowdfunds/${this.props.address}/requests`);
         } catch (err) {}
 
         this.setState({ approveLoading: false });
@@ -32,6 +34,7 @@ class RequestRow extends Component {
             await crowdfund.methods.finalizeRequest(this.props.id).send({
                 from: accounts[0]
             });
+            Router.pushRoute(`/crowdfunds/${this.props.address}/requests`);
         } catch (err) {}
 
         this.setState({ finalizeLoading: false });
