@@ -1,8 +1,0 @@
-const config = {
-    NODE_ENV:        'development',
-    MNEMONIC:        '',
-    PROVIDER_URI:    '',
-    FACTORY_ADDRESS: ''
-};
-
-module.exports = config;
